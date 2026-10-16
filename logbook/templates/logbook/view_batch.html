@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ batch.name }}</title></head>
+<body>
+    <h1>{{ batch.name }}</h1>
+    <p>Owner: {{ batch.owner.username }}</p>
+    <p>Sugar used: {{ batch.sugar_kg }} kg</p>
+    <p>Total volume: {{ batch.volume_l }} L</p>
+    <p>Potential ABV: {{ batch.potential_abv }}%</p>
+    <p>Notes: {{ batch.notes }}</p>
+    <p>Logged: {{ batch.created_at }}</p>
+    <p><a href="{% url 'batch_list' %}">Back to your batches</a></p>
+</body>
+</html>

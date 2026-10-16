@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Brewhaus Logbook - Register</title></head>
+<body>
+    <h1>Register</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color:red;">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <p>Username: <input type="text" name="username"/></p>
+        <p>Password: <input type="password" name="password"/></p>
+        <p><input type="submit" value="Register"/></p>
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</body>
+</html>

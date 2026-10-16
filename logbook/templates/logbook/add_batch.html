@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add a Batch</title></head>
+<body>
+    <h1>Add a new batch</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Batch name: <input type="text" name="name"/></p>
+        <p>Sugar (kg): <input type="number" step="0.01" name="sugar_kg"/></p>
+        <p>Volume (L): <input type="number" step="0.01" name="volume_l"/></p>
+        <p>Notes:<br/><textarea name="notes"></textarea></p>
+        <p><input type="submit" value="Save batch"/></p>
+    </form>
+    <p><a href="{% url 'batch_list' %}">Back to your batches</a></p>
+</body>
+</html>

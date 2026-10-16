@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Search Batches</title></head>
+<body>
+    <h1>Search your batches</h1>
+    <form method="get">
+        <input type="text" name="q" value="{{ query }}" placeholder="Search by name..."/>
+        <input type="submit" value="Search"/>
+    </form>
+
+    <ul>
+    {% for batch in results %}
+        <li>{{ batch.name }} — {{ batch.sugar_kg }}kg / {{ batch.volume_l }}L</li>
+    {% empty %}
+        <li>No results.</li>
+    {% endfor %}
+    </ul>
+
+    <p><a href="{% url 'batch_list' %}">Back to your batches</a></p>
+</body>
+</html>
