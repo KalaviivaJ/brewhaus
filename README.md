@@ -1,0 +1,7 @@
+Brewhaus Logbook is a small Django web app for homebrewers to register, log fermentation batches (sugar used, volume, calculated potential ABV), and search and view their brewing history. This project was built as the course project for the University of Helsinki’s Cyber Security Base course, and it intentionally contains 5 security flaws from the OWASP 2021 list, each paired with a working fix included as commented-out code in the source. The flaws and fixes are documented in the accompanying course report, with each one covering Broken Access Control, Cryptographic Failures, Injection, Identification and Authentication Failures, and Security Logging and Monitoring Failures.
+
+To run it locally, you’ll need Python 3.10 or newer and Django installed (pip install django). Clone the repository, then from the project root run python manage.py migrate to set up the database, followed by python manage.py runserver to start the development server. Open your browser to http://localhost:8000/, register a new account, and you’ll be able to add, search, and view your own batches from there.
+
+The app uses SQLite by default. The database file itself is not included in this repository and will be created automatically the first time you run migrate.
+
+This application is a deliberately vulnerable educational project built for a security course assignment. It should not be deployed as-is or reused in any real or production application
